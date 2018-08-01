@@ -25,7 +25,7 @@ mqtt_server = "10.0.1.3"
 def message(topic, payload):
     """Send MQTT messages."""
     mqttc.connect(mqtt_server, 1883)
-    mqtt.publish(topic, payload)
+    mqttc.publish(topic, payload)
 
 
 def welcome():
