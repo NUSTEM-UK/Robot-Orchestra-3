@@ -11,3 +11,11 @@ Python-based player clinet for Raspberry Pi GPIO. Uses GPIOZero, with `pigpio`-b
 
 
 
+## Sequence of operation
+
+### Bring up network
+
+### Bring up MQTT broker on 10.0.1.3
+
+It's worth running mqtt_sub on that box to diagnose network traffic.
+
