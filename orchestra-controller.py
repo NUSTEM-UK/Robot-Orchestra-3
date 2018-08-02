@@ -28,7 +28,7 @@ currentBeat = 0  # Keep track of which beat we're playing.
 defaultBPM = 120 # Barfs if we go much above 120; playBeat doesn't complete before next call. Eek!
 bpm = defaultBPM
 tempo = 60.0 / defaultBPM
-startStopButton = Button(5, pull_up=True, bounce_time=0.2)
+startStopButton = Button(5, pull_up=True, bounce_time=0.25)
 running = True
 
 
@@ -182,8 +182,8 @@ def on_message(client, userdata, msg):
             sleep(delay)
             twitch(("D00",))
             sleep(delay)
-            twitch(("D00",))
             rt.start()  # Restart the Trellis playback
+            twitch(("D00",))
             running = True
             print(">>> PLAY BACKING TRACK")
             # lead_in()   # Play a 4-beat lead-in
