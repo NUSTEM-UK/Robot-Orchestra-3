@@ -15,6 +15,7 @@
 
 import time
 from threading import Timer
+from time import sleep
 import Adafruit_Trellis
 import numpy as np
 import paho.mqtt.client as mqtt
