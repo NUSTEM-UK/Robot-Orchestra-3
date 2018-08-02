@@ -186,8 +186,9 @@ def lead_in():
     global bpm
     print(">>> LEAD IN PLAYING", bpm)
     delay = 60.0/bpm
+    ROBOTS = ("DZERO",)
     for _ in range(4):
-        twitch("DZERO") # Twitch just this robot. Heck, I hope that ancient code path still works.
+        twitch(ROBOTS) # Twitch just this robot. Heck, I hope that ancient code path still works.
         sleep(delay)
 
 
