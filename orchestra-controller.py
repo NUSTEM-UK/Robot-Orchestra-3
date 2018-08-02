@@ -161,6 +161,7 @@ def on_message(client, userdata, msg):
         rt.stop() # Stop playback
         running = False # Semaphore the rest of the system
         bpm = int(msg.payload)
+        rt.bpm(bpm)
 
 
     elif str(msg.topic) == "orchestra/status":
@@ -168,7 +169,7 @@ def on_message(client, userdata, msg):
         if str(msg.payload) == "lead-in":
             print(">>> LEAD-IN!")
             currentBeat = 0 # Rewind to the start of the Trellis
-            rt.bpm(bpm) # Set new tempo. TODO: sanity check!
+            # rt.bpm(bpm) # Set new tempo. TODO: sanity check!
             lead_in()   # Play a 4-beat lead-in
             rt.start()  # Restart the Trellis playback
         elif str(msg.payload) == "finished":
