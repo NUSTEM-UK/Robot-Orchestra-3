@@ -12,21 +12,9 @@ Dependencies (pip3 install):
 
 import sys
 from time import sleep
-import paho.mqtt.client as mqtt
+import ro_helpers_network
 from termcolor import colored, cprint
-from songsearcher import *
-from rttllist import *
-
-# Configuration for MQTT broker
-mqttc = mqtt.Client()
-mqtt_server = "10.0.1.3"
-#mqtt_server = "127.0.0.1"
-
-def message(topic, payload):
-    """Send MQTT messages."""
-    mqttc.connect(mqtt_server, 1883)
-    mqttc.publish(topic, payload)
-
+from songsearcher import searcher
 
 def welcome():
     """Output the banner title."""
@@ -87,7 +75,7 @@ def song_complete():
     clear_screen()
 
 def clear_screen():
-    for i in range(30):
+    for _ in range(30):
         print()
         sleep(0.05)
 
