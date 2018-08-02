@@ -250,7 +250,7 @@ rt = RepeatedTimer(tempo, playBeat)
 
 try:
     while True:
-        time.sleep(0.08)
+        time.sleep(0.08) # TODO: Replace with MQTT check.
 
         # If a button was just pressed or released...
         if trellis.readSwitches():
