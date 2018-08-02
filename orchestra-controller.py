@@ -153,6 +153,8 @@ def on_message(client, userdata, msg):
 
     if str(msg.topic) == "orchestra/bpm":
         """Prepare for playback."""
+        print(">>> BPM UPDATE!")
+        print(msg.topic, msg.payload)
         rt.stop() # Stop playback
         bpm = int(msg.payload)
 
@@ -160,11 +162,13 @@ def on_message(client, userdata, msg):
     elif str(msg.topic) == "orchestra/status":
         """Handle playback status updates."""
         if str(msg.payload) == "lead-in":
+            print(">>> LEAD-IN!")
             currentBeat = 0 # Rewind to the start of the Trellis
             rt.bpm(bpm) # Set new tempo. TODO: sanity check!
             lead_in()   # Play a 4-beat lead-in
             rt.start()  # Restart the Trellis playback
         elif str(msg.payload) == "finished":
+            print(">>> FINISHED!")
             rt.stop()   # Stop playback
             rt.bpm(defaultBPM) # Reset Orchestra tempo
     
