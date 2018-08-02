@@ -252,6 +252,8 @@ rt = RepeatedTimer(tempo, playBeat)
 # ...which are blocking. And we have a global callback thread timer running.
 # Sheesh, flow control in this code is gnarly.
 
+mqttc.loop_start()
+
 try:
     while True:
         time.sleep(0.08) # TODO: Replace with MQTT check.
@@ -286,3 +288,4 @@ try:
                 running = True
 finally:
     rt.stop()
+    mqttc.loop_stop()
