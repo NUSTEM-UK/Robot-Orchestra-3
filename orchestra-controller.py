@@ -149,14 +149,17 @@ def on_message(client, userdata, msg):
     """Handle incoming MQTT message."""
     global currentBeat
     global bpm
+    global running
 
+    msg.payload = msg.payload.decode("utf-8") # Because it's bytes on the wire. Ugh.
     print(str(msg.topic), str(msg.payload))
 
     if str(msg.topic) == "orchestra/bpm":
         """Prepare for playback."""
         print(">>> BPM UPDATE!")
-        print(msg.topic, msg.payload)
+        print(str(msg.topic), int(msg.payload))
         rt.stop() # Stop playback
+        running = False # Semaphore the rest of the system
         bpm = int(msg.payload)
 
 
@@ -290,7 +293,7 @@ try:
                 running = False
             else:
                 # Start playback!
-                print('>>> START')
+                print('>>> START', bpm)
                 rt.start()
                 running = True
 finally:
