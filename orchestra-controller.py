@@ -169,7 +169,7 @@ def on_message(client, userdata, msg):
         if str(msg.payload) == "lead-in":
             print(">>> LEAD-IN!")
             currentBeat = 0 # Rewind to the start of the Trellis
-            # rt.bpm(bpm) # Set new tempo. TODO: sanity check!
+            rt.bpm(bpm) # Set new tempo. TODO: sanity check!
             lead_in()   # Play a 4-beat lead-in
             rt.start()  # Restart the Trellis playback
         elif str(msg.payload) == "finished":
@@ -184,6 +184,7 @@ def on_message(client, userdata, msg):
 def lead_in():
     """Play a 4-beat lead-in on a custom channel."""
     global bpm
+    print(">>> LEAD IN PLAYING", bpm)
     delay = 60.0/bpm
     for _ in range(4):
         twitch("DZERO") # Twitch just this robot. Heck, I hope that ancient code path still works.
