@@ -252,6 +252,12 @@ rt = RepeatedTimer(tempo, playBeat)
 # ...which are blocking. And we have a global callback thread timer running.
 # Sheesh, flow control in this code is gnarly.
 
+mqttc = mqtt.Client()
+mqtt_server = "10.0.1.3"
+mqttc.on_connect = on_connect
+mqttc.on_message = on_message
+mqttc.connect(mqtt_server, 1883)
+
 mqttc.loop_start()
 
 try:
