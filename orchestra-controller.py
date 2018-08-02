@@ -26,6 +26,7 @@ from gpiozero import Button
 currentBeat = 0  # Keep track of which beat we're playing.
 
 defaultBPM = 120 # Barfs if we go much above 120; playBeat doesn't complete before next call. Eek!
+bpm = defaultBPM
 tempo = 60.0 / defaultBPM
 startStopButton = Button(5, pull_up=True, bounce_time=0.2)
 running = True
@@ -171,11 +172,26 @@ def on_message(client, userdata, msg):
             print(">>> LEAD-IN!")
             currentBeat = 0 # Rewind to the start of the Trellis
             rt.bpm(bpm) # Set new tempo. TODO: sanity check!
-            lead_in()   # Play a 4-beat lead-in
+            print(">>> LEAD-IN PLAYING", bpm)
+            delay = 60.0/bpm
+            # Lead-in loop unrolled because we don't want the last delay
+            # -- it's baked into the timer callback.
+            twitch(("D00",))
+            sleep(delay)
+            twitch(("D00",))
+            sleep(delay)
+            twitch(("D00",))
+            sleep(delay)
+            twitch(("D00",))
             rt.start()  # Restart the Trellis playback
+            running = True
+            print(">>> PLAY BACKING TRACK")
+            # lead_in()   # Play a 4-beat lead-in
+            # rt.start()  # Restart the Trellis playback
         elif str(msg.payload) == "finished":
             print(">>> FINISHED!")
             rt.stop()   # Stop playback
+            running = False
             rt.bpm(defaultBPM) # Reset Orchestra tempo
     
     else:
@@ -183,7 +199,10 @@ def on_message(client, userdata, msg):
 
 
 def lead_in():
-    """Play a 4-beat lead-in on a custom channel."""
+    """Play a 4-beat lead-in on a custom channel.
+    
+    This is now defunct, I think?
+    """
     global bpm
     print(">>> LEAD IN PLAYING", bpm)
     delay = 60.0/bpm
