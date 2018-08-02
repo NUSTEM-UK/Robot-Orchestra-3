@@ -17,6 +17,7 @@ import time
 from threading import Timer
 import Adafruit_Trellis
 import numpy as np
+import paho.mqtt.client as mqtt
 from mod_orchestra import playset
 from gpiozero import Button
 
