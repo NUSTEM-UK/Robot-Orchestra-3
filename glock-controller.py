@@ -23,8 +23,8 @@ from time import sleep
 from sys import exit
 from rtttl import RTTTL
 from rttllist import songdict
-import ro_helpers_network
-import ro_helpers_audio
+import mod_orchestra # Network functions
+import mod_audio
 
 import numpy as np
 #from math import log2, pow # Python3 has a log2 built-in
