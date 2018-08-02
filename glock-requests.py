@@ -75,7 +75,7 @@ def song_complete():
     clear_screen()
 
 def clear_screen():
-    for _ in range(30):
+    for i in range(30):
         print()
         sleep(0.05)
 
