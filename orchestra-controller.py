@@ -18,7 +18,7 @@ from threading import Timer
 import Adafruit_Trellis
 import numpy as np
 import paho.mqtt.client as mqtt
-from mod_orchestra import playset
+from mod_orchestra import playset, twitch, message
 from gpiozero import Button
 
 # Global variables. Which is nasty, right?
