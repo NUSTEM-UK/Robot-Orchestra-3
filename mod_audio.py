@@ -2,6 +2,7 @@ import glob
 import os
 import re
 import pygame
+from math import log2, pow
 
 try:
     pygame.init() # Throws error in pylint: security issue for C module. Ignore.
@@ -95,8 +96,8 @@ def freq_to_note(freq):
     Based on https://www.johndcook.com/blog/2016/02/10/musical-pitch-notation/
     by John D. Cook
     """
-    # h = round(12*log2(freq/C0)) # Python3 only
-    h = round(12*(log(freq/C0)/log(2)))
+    h = round(12*log2(freq/C0)) # Python3 only
+    # h = round(12*(log(freq/C0)/log(2)))
     octave = (h // 12) - 6
     n = h % 12
     return name[int(n)], int(octave)

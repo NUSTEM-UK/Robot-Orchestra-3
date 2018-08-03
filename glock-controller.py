@@ -15,15 +15,18 @@ Python3 (log2 pre-installed rather than loaded from math module)
 Dependencies (all `pip3 install`):
     pygame
     paho-mqtt
-    dothat
+
+Other dependencies:
+    curl -sS get.pimoroni.com/displayotron | bash
+    
 """
 
 import pygame
 from time import sleep
 from sys import exit
 from math import ceil
-#from math import log2, pow # Python3 has a log2 built-in
-from math import log, pow
+from math import log2, pow # Python3 has a log2 built-in
+# from math import log, pow
 import numpy as np
 import paho.mqtt.client as mqtt
 import dothat.backlight as backlight
@@ -32,7 +35,7 @@ from mod_orchestra import message # Network functions
 from mod_audio import freq_to_note, handle_note
 from rtttl import RTTTL
 from rttllist import songdict
-from gpiozero import Device, servo
+from gpiozero import Device, Servo
 from gpiozero.pins.pigpio import PiGPIOFactory
 
 # Configure audio and sound synthesis.
@@ -55,6 +58,11 @@ Device.pin_factory = PiGPIOFactory()
 
 myservo = [Servo(27), Servo(22), Servo(5), Servo(6),
            Servo(13), Servo(19), Servo(26), Servo(21)]
+
+# Initialise the servos!
+for i in range(8):
+    myservo[i].min()
+    # sleep(0.1)
 
 def on_connect(self, client, userdata, rc):
     """Connect to MQTT broker & subscribe to cue channel."""
@@ -142,13 +150,13 @@ def on_message(client, userdata, msg):
     
     if str(msg.topic) == "orchestra/cue":
         """Fire the cue playback function."""
-        play_cue(msg.payload)
+        play_cue(msg.payload.decode("utf-8"))
 
     elif str(msg.topic) == "orchestra/song":
         print("Song title received")
         # Display song title on the HAT
         lcd.set_cursor_position(0,1)
-        lcd.write(str(msg.payload[:16]).ljust(16))
+        lcd.write(str(msg.payload[:16].decode("utf-8")).ljust(16))
 
     else:
         print("Well, that didn't work")
