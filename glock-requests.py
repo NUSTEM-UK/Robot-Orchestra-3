@@ -13,6 +13,7 @@ Dependencies (pip3 install):
 import sys
 from time import sleep
 import ro_helpers_network
+import paho.mqtt.client as mqtt
 from termcolor import colored, cprint
 from songsearcher import searcher
 
@@ -87,17 +88,40 @@ def countdown():
     cprint("...1", 'green')
     sleep(0.8)    
 
-if __name__ == "__main__":
-    clear_screen()
+
+def next_request():
     welcome()
     request = get_input()
-    # print(request)
     print()
     cprint(">>> MATCHING...", 'red')
     guessed_song_title, match_accuracy, song_rtttl = searcher(request)
     
     respond(request, guessed_song_title, match_accuracy)
     play_song(guessed_song_title, song_rtttl)
-    sleep(2)
-    song_complete()
-    welcome()
+    
+
+def on_connect(self, client, userdata, rc):
+    """Connect to the MQTT broker and subscribe to relevant channels."""
+    print("Connected with result code: " + str(rc))
+    self.subscribe("orchestra/status")
+
+def on_message(client, userdata, msg):
+    """Handle incoming MQTT messages."""
+
+    msg.payload = msg.payload.decode("utf-8")
+    if str(msg.topic) == "orchestra/status":
+        """We have a status update."""
+        if str(msg.payload) == "finished":
+            song_complete()
+            next_request()
+
+
+if __name__ == "__main__":
+    mqttc = mqtt.Client()
+    mqtt_server = "10.0.1.3"
+    mqttc.on_connect = on_connect
+    mqttc.on_message = on_message
+    mqttc.connect(mqtt_server, 1883)
+
+    next_request()
+    mqttc.loop_forever()

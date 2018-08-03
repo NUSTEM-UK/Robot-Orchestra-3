@@ -18,4 +18,3 @@ def message(topic, payload):
     """Send MQTT messages."""
     mqttc.connect(mqtt_server, 1883)
     mqttc.publish(topic, payload)
-
