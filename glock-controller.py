@@ -23,6 +23,7 @@ from time import sleep
 from sys import exit
 from rtttl import RTTTL
 from rttllist import songdict
+from math import ceil
 import mod_orchestra # Network functions
 import mod_audio
 
@@ -45,6 +46,8 @@ backlight.sweep(5)          # Set a rainbow background
 lcd.set_contrast(50)        # Readable contrast, for our Displayotron HAT
 lcd.write("SYSTEM START")   
 backlight.graph_off()       # Make sure the hellish-bright sidebar LEDs are off
+
+maxbpm = 160.0
 
 # Default to pigpio pin factory, for hardware PWM
 # (allows more servos to be controlled)
@@ -83,9 +86,18 @@ def play_cue(cue):
     # Send the lead-in command
     message("status", "lead-in")
 
-    # Pause for that to happen
-    sleep(tune.bpm / 30.0)
+    # Play the lead-in. Assume we're in 4/4, because all music is, right?
+    # First calculate the bpm we're actually going to use.
+    divider = ceil(tune.bpm / maxbpm)
+    playbpm = float(tune.bpm) / divider
+    playdelay = 60.0 / playbpm
 
+    for i in range(4):
+        myservo[7].mid()
+        sleep(playdelay/4)
+        myservo[7].min()
+        sleep(playdelay * 3 / 4)
+    
     # ...and away we go!
     for freq, msec in tune.notes():        
         # print(freq, msec)

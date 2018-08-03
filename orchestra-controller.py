@@ -167,8 +167,8 @@ def on_message(client, userdata, msg):
         # We need to handle insanely high bpm settings, since the dataset includes some
         # (presumably for temporal resolution reasons in the song playback. Ah, high fidelity)
         # The maximum bpm the Trellis can handle is about 160, so:
-        divider = ceil(int(msg.payload)/maxbpm) # Get the divider with which we'll need to work
-        bpm = int(msg.payload) / divider
+        divider = ceil(float(msg.payload)/maxbpm) # Get the divider with which we'll need to work
+        bpm = float(msg.payload) / divider
         # bpm = int(msg.payload)
         rt.bpm(bpm)
 
