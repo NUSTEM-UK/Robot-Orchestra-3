@@ -167,34 +167,31 @@ def on_message(client, userdata, msg):
         # We need to handle insanely high bpm settings, since the dataset includes some
         # (presumably for temporal resolution reasons in the song playback. Ah, high fidelity)
         # The maximum bpm the Trellis can handle is about 160, so:
-        divider = ceil(int(msg.payload)/maxbpm) # Get the divider with which we'll need to work
-        bpm = int(msg.payload) / divider
+        divider = ceil(float(msg.payload)/maxbpm) # Get the divider with which we'll need to work
+        bpm = float(msg.payload) / divider
         # bpm = int(msg.payload)
         rt.bpm(bpm)
 
 
     elif str(msg.topic) == "orchestra/status":
-        """Handle playback status updates."""
+        """Handle playback status updates.
+        
+        Doing it all this way is a bit of a legacy of how I'd originally planned to 
+        have a conducting instrument as a separate thing. In practice, we used servo #7 
+        on the glockenspiel as an expedient alternative.
+        """
         if str(msg.payload) == "lead-in":
             print(">>> LEAD-IN!")
             currentBeat = 0 # Rewind to the start of the Trellis
             rt.bpm(bpm) # Set new tempo. TODO: sanity check!
             print(">>> LEAD-IN PLAYING", bpm)
             delay = 60.0/bpm
-            # Lead-in loop unrolled because we don't want the last delay
-            # -- it's baked into the timer callback.
-            twitch(("D00",))
-            sleep(delay)
-            twitch(("D00",))
-            sleep(delay)
-            twitch(("D00",))
-            sleep(delay)
+            # Pause for lead-in count
+            sleep(delay * 3)
             rt.start()  # Restart the Trellis playback
-            twitch(("D00",))
             running = True
             print(">>> PLAY BACKING TRACK")
-            # lead_in()   # Play a 4-beat lead-in
-            # rt.start()  # Restart the Trellis playback
+    
         elif str(msg.payload) == "finished":
             print(">>> FINISHED!")
             rt.stop()   # Stop playback
@@ -203,21 +200,6 @@ def on_message(client, userdata, msg):
     
     else:
         print("MQTT error.")
-
-
-def lead_in():
-    """Play a 4-beat lead-in on a custom channel.
-    
-    This is now defunct, I think?
-    """
-    global bpm
-    print(">>> LEAD IN PLAYING", bpm)
-    delay = 60.0/bpm
-    # ROBOTS = ("D00",)
-    for _ in range(4):
-        twitch(("D00",)) # Twitch just this robot. Heck, I hope that ancient code path still works.
-        sleep(delay)
-
 
 
 def playBeat():

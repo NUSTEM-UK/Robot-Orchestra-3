@@ -21,16 +21,17 @@ Dependencies (all `pip3 install`):
 import pygame
 from time import sleep
 from sys import exit
-from rtttl import RTTTL
-from rttllist import songdict
-import mod_orchestra # Network functions
-import mod_audio
-
-import numpy as np
+from math import ceil
 #from math import log2, pow # Python3 has a log2 built-in
 from math import log, pow
+import numpy as np
+import paho.mqtt.client as mqtt
 import dothat.backlight as backlight
 import dothat.lcd as lcd
+from mod_orchestra import message # Network functions
+from mod_audio import freq_to_note, handle_note
+from rtttl import RTTTL
+from rttllist import songdict
 from gpiozero import Device, servo
 from gpiozero.pins.pigpio import PiGPIOFactory
 
@@ -45,6 +46,8 @@ backlight.sweep(5)          # Set a rainbow background
 lcd.set_contrast(50)        # Readable contrast, for our Displayotron HAT
 lcd.write("SYSTEM START")   
 backlight.graph_off()       # Make sure the hellish-bright sidebar LEDs are off
+
+maxbpm = 160.0
 
 # Default to pigpio pin factory, for hardware PWM
 # (allows more servos to be controlled)
@@ -83,8 +86,17 @@ def play_cue(cue):
     # Send the lead-in command
     message("status", "lead-in")
 
-    # Pause for that to happen
-    sleep(tune.bpm / 30.0)
+    # Play the lead-in. Assume we're in 4/4, because all music is, right?
+    # First calculate the bpm we're actually going to use.
+    divider = ceil(tune.bpm / maxbpm)
+    playbpm = float(tune.bpm) / divider
+    playdelay = 60.0 / playbpm
+
+    for _ in range(4):
+        myservo[7].mid()
+        sleep(playdelay/4)
+        myservo[7].min()
+        sleep(playdelay * 3 / 4)
 
     # ...and away we go!
     for freq, msec in tune.notes():        
@@ -143,6 +155,8 @@ def on_message(client, userdata, msg):
 
 
 # Set up MQTT callbacks
+mqttc = mqtt.Client()
+mqtt_server = "10.0.1.3"
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
