@@ -19,6 +19,7 @@ from time import sleep
 import Adafruit_Trellis
 import numpy as np
 import paho.mqtt.client as mqtt
+from math import ceil
 from mod_orchestra import playset, twitch, message
 from gpiozero import Button
 
@@ -28,6 +29,7 @@ currentBeat = 0  # Keep track of which beat we're playing.
 defaultBPM = 120 # Barfs if we go much above 120; playBeat doesn't complete before next call. Eek!
 bpm = defaultBPM
 tempo = 60.0 / defaultBPM
+maxbpm = 160.0
 startStopButton = Button(5, pull_up=True, bounce_time=0.3)
 running = True
 
@@ -162,7 +164,12 @@ def on_message(client, userdata, msg):
         print(str(msg.topic), int(msg.payload))
         rt.stop() # Stop playback
         running = False # Semaphore the rest of the system
-        bpm = int(msg.payload)
+        # We need to handle insanely high bpm settings, since the dataset includes some
+        # (presumably for temporal resolution reasons in the song playback. Ah, high fidelity)
+        # The maximum bpm the Trellis can handle is about 160, so:
+        divider = ceil(int(msg.payload)/maxbpm) # Get the divider with which we'll need to work
+        bpm = int(msg.payload) / divider
+        # bpm = int(msg.payload)
         rt.bpm(bpm)
 
 
