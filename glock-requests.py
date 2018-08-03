@@ -16,6 +16,8 @@ import ro_helpers_network
 import paho.mqtt.client as mqtt
 from termcolor import colored, cprint
 from songsearcher import searcher
+from mod_orchestra import message
+
 
 def welcome():
     """Output the banner title."""
@@ -56,9 +58,9 @@ def play_song(song, cue):
     cprint(" █░░█ █░░ █▄▄█ █▄▄█ ▀█▀ █░░█ █░▀█", 'green')
     cprint(" █▀▀▀ ▀▀▀ ▀░░▀ ▄▄▄█ ▀▀▀ ▀░░▀ ▀▀▀▀", 'green')
     print()
-    # message("orchestra/song", song)
+    message("song", song)
     sleep(0.2)
-    # message("orchestra/cue", cue)
+    message("cue", cue)
 
 
 def song_complete():
