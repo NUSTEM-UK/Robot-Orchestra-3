@@ -85,7 +85,6 @@
 50 Cent - Back Down
 50 Cent - Disco Inferno
 50 Cent - Dont Push Me
-50 Cent - Fucking Graduate
 50 cent - High All The Time
 50 Cent - Hustlers Ambition
 50 Cent - If I Can Poppin Them Thangs
@@ -104,9 +103,6 @@
 50 Cent - P.I.M.P.
 50 Cent - P.I.M.P
 50 Cent - Patiently Waiting
-50 Cent - Wangster
-50 Cent - Wanksta V2
-50 cent - Wanksta
 50 Cent - Window Shoppa
 50 Cent - Window Shopper
 50 Cents - Ain't What You Do
@@ -115,7 +111,6 @@
 50 Cents - Many Men
 50 Cents - P.I.M.P.
 50 Cents - Patiently Waiting
-50 Cents - Wankster
 56 K Feat. Bejay - Save A Prayer
 56 K Ft. Bejay - Save A Prayer
 5ive - Let's Dance V4.0
@@ -1134,7 +1129,6 @@ Blink 182 - Dammit
 Blink 182 - Damnit
 Blink 182 - Feeling This
 Blink 182 - First Date
-Blink 182 - Fuck A Dog
 Blink 182 - I Miss You (Top)
 Blink 182 - I Miss You
 Blink 182 - Josie
@@ -1200,7 +1194,6 @@ Blue - One Love V2
 Blue - One Love V3
 Blue - One Love
 Blue - Signed Sealed Delivered Im Yours
-Blue - Sorry Seems To Be The Hardest Fucking Word
 Blue - Sorry Seems To Be The Hardest...
 Blue - Too Close
 Blue - U Make Me Wanna
@@ -1417,7 +1410,6 @@ Bouga - Belsunce Breackdown
 Bounce
 Bowling For Soup - Girl All The Bad Guys Want
 Bowling for Soup - Girls All The Bad Guys Want
-Bowling For Tea - She's A Bitch
 Box Car Racer - I Feel So
 Boxcar Racer - There Is
 Boxracer - I Feel So
@@ -1868,7 +1860,6 @@ CKY - 96 Quiet Bitter Beings
 CKY - 96 Quite Bitter Beings
 CKY - Attached At The Hip
 CKY - Escape From Hellview
-Cky - Fat Fuck
 Cky - Genesis 12a 1
 CKY - Lost In A Contraption
 CKY - Remix 2002
@@ -2110,7 +2101,6 @@ D - Devils - Black Magic
 D - Devils - Judgement Day
 D - Men Feat. Brutus & Negative - Mijn Feestje
 D 12 - Girls
-D 12 Feat. Eminem - Shit On You
 D Devils - 6th Gate
 D Devils - Black Magic
 D Devils - Judgement Day
@@ -2132,7 +2122,6 @@ D12 - American Psycho
 D12 - Fight Music
 D12 - Girls
 D12 - How Come
-D12 - I Shit On You
 D12 - My Band
 D12 - Nasty Mind
 D12 - Purple Hills
@@ -2140,8 +2129,6 @@ D12 - Purple Pills 1
 D12 - Purple Pills 2
 D12 - Purple Pills 3
 D12 - Purple Pills
-D12 - Shit Can Happen
-D12 - Shit On You
 D12 Feat. Eminem - Purple Hills
 D12 Ft Eminem - Purple Pills (Purple Hills)
 Da Boy Tommy - Candyman
@@ -2276,7 +2263,6 @@ Dave Matthews Band - Ants Marching
 Dave Matthews Band - Crash
 Dave Matthews Band - Crush
 Dave Matthews Band - Satellite
-Dave Mccullen - Bitch
 David Allen Coe - You Never Call Me By My Name
 David Benoit - Freedom At Midnight
 David Bowie - All The Young Dudes
@@ -2539,7 +2525,6 @@ Direct - Rollercoaster
 Dirt Devils - The Drill
 Dirty Dancing - Time Of My Life
 Dirty Dancing
-Dirty Dozen - Fuckers
 Dirty Vegas - Days Go By
 Dirtyminded Familie
 Disney - Grim Grinning Ghost (Haunted Mansion)
@@ -2622,15 +2607,7 @@ Dj Jean - Supersounds
 DJ Jean - The Launch
 DJ Jippy - Dj Jippy
 DJ JosÇ - Hecitate
-DJ Jose &amp G Spott - Access
-DJ Jose &amp G Spott - House Of Justice
 DJ Jose - Stepping To The Beat
-DJ Jose Versus DJ Spott - House Of Justic
-DJ Jose Vs G Spott - 2 Symbols
-DJ Jose Vs. DJ Spott - House Of Justic
-DJ Jose Vs. G - Spott - 2 Symbols
-DJ Jose Vs. G - Spott - Access
-DJ Jose Vs. G Spott - House Of Justice
 DJ Jurgen - Better Off Alone
 DJ Jurgen Feat. Alice Deejay - Better Off Alone
 DJ Kicken Vs Mc Q - Happy Together 2004
@@ -2742,12 +2719,10 @@ DJ Tiesto
 DJ Tiestoo - Urban Train
 DJ Tolmie   369 - Space
 DJ TOLMIE - Unknown
-DJ Tom X - Cocaine
 DJ Tomcraft - Loneliness
 DJ Tommek
 DJ Weirdo - Irritantje
 DJ Weirdo - The Theme
-DJ Wicked & Nonasylum - Up Yours
 Dj Zinc - 138 Trek
 Dj Zinc - Kinda Funky
 DJ's At Work - Time To Wonder
@@ -2765,14 +2740,11 @@ DMX - Ruff Riders
 DMX - Ruff Ryder's Anthem
 DMX - Ruff Ryders Anthem
 DMX - We Right Here
-DMX - What They Really Want From A Nigga
-DMX - What They Want From A Nigga
 Dmx - What They Want
 DmX - Where The Hood At
 DMX - X Gonna Give It To Ya V2
 DMX - X Gonna Give It To Ya
 DMX Ft. Sisqo - What They Want
-DMX Ft. Sisqo - What Those Bitches Want
 Dnote - Shed My Skin
 Do - Angel By My Side
 Do - Everyday Is Christmas
@@ -2803,7 +2775,6 @@ Doraemon
 Dove - Moony
 Doves - Black And White Town
 Doves - There Goes The Fear
-Down Ass Chick
 Dr Dre &amp Snoop Doggy Dogg - The Next Episode
 Dr Dre - Bad Intentions
 Dr Dre - Forgot About Dre
@@ -2911,7 +2882,6 @@ E Wok - Supersound
 E17 - Stay Another Day
 Eagles - Hotel California V2
 Eagles - Hotel California
-Eamon - Fuck It V2
 Eamon - I Love Them Ho's (Howop)
 Ear Buster
 Earth Wind & Fire - September
@@ -2966,9 +2936,6 @@ Elastica - Connection (Trigger Happy Tv)
 Elbow - Fallen Angel
 Eldarevalsen - Unknown
 Electric 6 - Danger High Voltage
-Electric 6 - Gay Bar
-Electric Six - Gay Bar Ver.2
-Electric Six - Gay Bar
 Elephan Man - Log On
 Elephant Man - Egyptian Dance
 Elephant Man - Pon De River
@@ -3022,15 +2989,12 @@ Emilia - Big Big World V2.0
 Emilia - Big Big World V3.0
 Emilia - Big Big World
 Emin3M - Business
-Emin3M - Suck My Dick
 Emin3M! - The Cleaning Out My Closet
 Eminem &amp Dr Dre - Guilty Conscience
 Eminem - 8 Mile
 Eminem - Amityville
 Eminem - As The World Turns
-Eminem - Ass Like That
 Eminem - Bad Meets Evil
-Eminem - Bitch Please
 Eminem - Bong Song
 Eminem - Business V2
 Eminem - Business V3
@@ -3039,7 +3003,6 @@ Eminem - Bussiness
 Eminem - Cleanin Out My Closet 111
 Eminem - Cleaning Out My Closet
 Eminem - Criminal
-Eminem - Drug Ballad
 Eminem - Eminem Remix
 Eminem - Guilty Concience
 Eminem - Guilty Conscience
@@ -3075,15 +3038,12 @@ Eminem - Rastaman
 Eminem - Real Slim Shady
 Eminem - Role Model
 Eminem - Shady
-Eminem - Shit On You
 Eminem - Sing For The Moment (End) V2
 Eminem - Sing For The Moment (End)
 Eminem - Sing For The Moment V3
 Eminem - Sing For The Moment
 Eminem - Square Dance
 Eminem - Stan
-Eminem - Still Don't Give A Fuck
-Eminem - Suck My Dick
 Eminem - Superman
 Eminem - The Real Slim Shady
 Eminem - The Way I Am
@@ -3148,7 +3108,6 @@ Epica - Solitary Ground
 Eraserheads - Spoliarium
 Erasure - A Little Respect
 Erasure - Breathe
-Eric Clapton - Cocaine
 Eric Clapton - I Shot The Sheriff
 Eric Clapton - Layla
 Eric Clapton - Tears In Heaven
@@ -3517,7 +3476,6 @@ Films And Tv - Mr Bean
 Films And Tv - Mr Benn
 Films And Tv - Mr Men
 Films And Tv - Munsters
-Films And Tv - Murder She Wrote
 Films And Tv - Neighbours
 Films And Tv - On The Buses
 Films And Tv - Only Fools And Horses 1
@@ -3566,8 +3524,6 @@ Films And Tv - Skippy The Bush Kangaroo
 Films And Tv - Sledge Hammer
 Films And Tv - Smurfs
 Films And Tv - Some Mothers Do Ave Em
-Films And Tv - Southpark - Uncle Fucker 1
-Films And Tv - Southpark - Uncle Fucker 2
 Films And Tv - Speed
 Films And Tv - Spiderman 1
 Films And Tv - Spiderman 2
@@ -3834,7 +3790,6 @@ From This Moment
 Frosty The Snowman - Unknown
 Frosty The Snowman
 Frreeeeeetylers
-Fuck Me Bitch
 Fugees - Killin Me Softly V2.0
 Fugees - Killing Me Softly (1)
 Fugees - Killing Me Softly (2)
@@ -3844,19 +3799,9 @@ Fun 2 Remix
 Futura - Enchantment
 Future Breeze - Temple Of Dreams
 Futureshock - On My Mind
-G - Spott - City Streets
-G - Spott - Louder
-G - Spott - N-R-G
-G - Spott - No Comment
-G - Spott - The Scene
 G - Unit - Stunt 101
 G Boyz - Als Je Nou Niet Springt ...
 G boyz - Als Je Nou Niet Springt...
-G Spott - City Streets
-G Spott - House Of Justice
-G spott - Louder
-G Spott - N-R-G
-G Spott - Nrg
 G Unit - Remix
 G. Joling & J. Rietman - At Your Service
 G4 - Bohemian Rhapsody
@@ -4142,7 +4087,6 @@ Grad Damen - Selina
 Graham Nash - Chicago
 Grandaddy - Am180
 Grande Fratello
-Granny's Little Dildos - Rodents
 Grappig
 Graz Goal Tune
 Grease (John Travolta) - Grease Lightning
@@ -4289,7 +4233,6 @@ Happy Days
 Happy Hardcore - Children Of The Night
 Happy Tree Friends - Theme
 Har Dil Jo
-Hard Creation - Bastard Asshole
 Hard Creation - I Will Have That Power
 Hard Sl - Common Sense
 Hardcore - Dht Gabber
@@ -4326,7 +4269,6 @@ Have Yourself A Merry Little Christmas
 Haven - Til The End
 Hawaii 5 O - Theme
 Hawaii 5
-Hazzard - Gay Boyfriend
 He - Man Masters Of The Universe
 He Man
 Head Over Me
@@ -4929,7 +4871,6 @@ Jesu Joy Of Man's Desiring - J.S. Bach
 Jesus Chris Superstar
 Jesus
 Jet - Are You Gonna Be My Girl
-Jet - Cold Hard Bitch
 Jethro Tull - Bouree
 Jetsons
 Jewel - Foolish Games
@@ -5398,7 +5339,6 @@ Kut Marrokanen (The Best Ever)
 Kut Nederlanders
 Kuwait National Anthem
 Kyle Minogue - Spinning Around
-Kyle's Mom Is A Bitch
 Kylie - Akcent
 Kylie - I Believe In You
 Kylie - It's In Your Eyes
@@ -6147,7 +6087,6 @@ Men2b - Keep On Moving
 Men2Be - Bigger Than That
 Men2Be - Keep On Moving
 Mental Theo - Revolution
-Meredith Brooks - Bitch
 Merrily - Unknown
 Merrith Komproe - 7 Kings
 Merrith Komproe - Ah Le Yar
@@ -6158,8 +6097,6 @@ Mesmerize - Ja Rule Feat. Ashanti
 Mestreechs Volksleed
 Metal Gear Solid 2 - Theme
 Metal Gear Solid 2 Sons Of Liberty
-Metallica - Ain't My Bitch
-Metallica - Aint My Bitch
 Metallica - Black Album
 Metallica - Bleeding Me V1.0
 Metallica - Bleeding Me V2.0
@@ -6542,7 +6479,6 @@ Mya - Case Of The Ex 2
 Mya - Case Of The Ex
 Mya - Case Of The X (Verse)
 Mya - Free
-Mylene Farmer - Fuck Them All
 Mylo - Destroy Rock N Roll
 Mylo - Doctor Pressure
 Mylo - Drop The Pressure
@@ -6751,7 +6687,6 @@ Nelly Furtado - I'm Like A Bird
 Nelly Furtado - Im Like A Bird
 Nelly Furtado - Powerless (Say What You Want)
 Nelly Furtado - Powerless
-Nelly Furtado - Shit On The Radio
 Nelly Furtado - Try V2
 Nelly Furtado - Try
 Nelly Furtado - Turn Off The Light
@@ -6860,7 +6795,6 @@ Nirvana - Son Of A Gun
 Nirvana - Teen Spirit
 Nirvana - The Gift From Satan
 Nirvana - The Way Is Of Fire
-Nirvana - The World Is Shit
 Nirvana - Verse Chorus Verse
 Nivea - Runaway
 Nivea Feat. R. Kelly - Laundromat
@@ -6941,7 +6875,6 @@ Nsync - Gone
 Nsync - I Drive Myself Crazy
 Nsync - Its Gonna Be Me
 NSync - Pop
-NSync - This I Promise You
 Ntjnh - Tum Ver.2
 Nu Flow - Big Brovaz
 Nunca - House Of Doom
@@ -7007,7 +6940,6 @@ Oh Dennenboom
 Oh Kom Er Eens Kijken
 Ohne Holland Fahren Wir Zur Wm.
 Oksa
-Old Dirty Bastard - Shimmy Shimmy Ya
 Olle - Unknown
 Olliva Mtukuzi - Mvuma
 Olsen Brothers - Fly On The Wings Of Love
@@ -7410,7 +7342,6 @@ Prodigy - Out Of Space 1
 Prodigy - Out Of Space 2
 Prodigy - Out Of Space
 Prodigy - Phoenix
-Prodigy - Smack My Bitch Up
 Prodigy - Voodoo Pepole
 Productions - Ruff Squad
 Profigy - No Good
@@ -7544,7 +7475,6 @@ Rage Against The Machine - Killing In The Name Of
 Rage Against The Machine - Know Your Enemy
 Rage Against The Machine - Revolver
 Rage Against The Machine - Roll Right
-Raging Speedhorn - Fuck The Voodooman
 Raging Speedhorn - Hate Song
 Raging Speedhorn - High Whore
 Raging Speedhorn - Iron Cobra
@@ -7665,8 +7595,6 @@ Reel Big Fish - Say Ten
 Reel Big Fish - Sell Out
 Reel Big Fish - She Has A Girlfriend Now
 Reelists Freak Mode
-Reeloop - Fucking Society (Club Gravity Remix)
-Reeloop - Fucking Society
 Reflekt Feat. Delline Bass - Need To Feel Loved V2
 Reflekt feat. Delline Bass - Need To Feel Loved
 Reggae (Baby Cham)
@@ -8082,7 +8010,6 @@ Scoop - Rock The House
 Scooter - Back In The Uk
 Scooter - Call Me Manana
 Scooter - First Time
-Scooter - Fuck The Millennium
 Scooter - Hello!
 Scooter - Hello
 Scooter - How Much Is The Fish
@@ -8169,8 +8096,6 @@ Sesamstraat - Sesamstraat Theme
 Sestre - Samo Ljubezen V2.0
 Sex And The City - Theme
 Sex And The City
-Sex Bommel
-Sex Bommol
 Sex Pistols - Anarchy In The Uk
 Sex Pistols - Friggin In The Riggin
 Sex Pistols - Silly Thing
@@ -8184,7 +8109,6 @@ Shaggy - Angel 1
 Shaggy - Angel 2
 Shaggy - Angel
 Shaggy - Dance And Shout
-Shaggy - He Sexy Lady
 Shaggy - Hey Sexy Lady
 Shaggy - Hope
 Shaggy - It Wasn't Me V1.0
@@ -8271,7 +8195,6 @@ Shifty - Slide Along Side V2
 Shifty - Slide Along Side
 Shin Chan Theme - Shin Chan
 Shirley Bassey - This Is My Life (Amstel Lite)
-Shit On The Geordies
 Shockers - Theme
 Shola Ama - You Might Need Somebody
 Shoop Song
@@ -8541,12 +8464,8 @@ Soundgarden - Spoonman
 South Africa - National Anthem V2
 South Park   Chef - Chocolate Salty Balls
 South Park - Chocolate Salty Balls
-South Park - Kyle's Mom Is A Stupid Bitch
 South Park - Theme
-South Park - Uncle Fucka
 South Side Spinners - Luvstruck
-Southpark - Cartman's Mom Is A Stupid Bitch
-Southpark - Uncle Fucka
 Southside Spinners - Luvstruck 2005
 Southside Spinners - Luvstruck
 Soviet Hymne
@@ -8966,7 +8885,6 @@ Tenacious D - Tribute
 Terichunar
 Terminator Soundtrack - Theme
 Terminatorv v2.0 - Theme
-Terrance And Philip - Uncle Fucka
 Terror Squad ft. Fat Joe - Lean Back
 Tess - Stupid
 Tetraga Feye - Ehab Tawfeek
@@ -9091,7 +9009,6 @@ The Game - Dreams
 The game feat. 50 cent - How Do We Do
 The Game Ft 50 Cent - How We Do
 The Game ft. 50 Cent - How We Do
-The Gay Squad - Rump My Batty
 The Girls From Overijssel Rule
 The Godfather - Theme
 The Good, The Bad & The Ugly - Theme
@@ -9730,7 +9647,6 @@ Umek - Gatex
 Unbekannt - Dynamo Dresden Die 2te
 Unbekannt - Dynamodresden
 Unbreakeable - Westlife
-Uncle Fucker
 Uncle Kracker - Follow Me
 Uncle Kracker - Yeah Yeah Yeah
 Uncle Neuker
