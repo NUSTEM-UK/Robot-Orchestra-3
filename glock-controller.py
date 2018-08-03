@@ -15,7 +15,10 @@ Python3 (log2 pre-installed rather than loaded from math module)
 Dependencies (all `pip3 install`):
     pygame
     paho-mqtt
-    dothat
+
+Other dependencies:
+    curl -sS get.pimoroni.com/displayotron | bash
+    
 """
 
 import pygame
