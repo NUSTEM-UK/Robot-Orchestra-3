@@ -94,6 +94,8 @@ def countdown():
 def next_request():
     welcome()
     request = get_input()
+    if request == "": # handle null input with an easter egg
+        request = "Films And Tv - Match Of The Day"
     print()
     cprint(">>> MATCHING...", 'red')
     guessed_song_title, match_accuracy, song_rtttl = searcher(request)
