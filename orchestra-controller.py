@@ -153,6 +153,7 @@ def on_message(client, userdata, msg):
     """Handle incoming MQTT message."""
     global currentBeat
     global bpm
+    global defaultBPM
     global running
 
     msg.payload = msg.payload.decode("utf-8") # Because it's bytes on the wire. Ugh.
@@ -196,7 +197,8 @@ def on_message(client, userdata, msg):
             print(">>> FINISHED!")
             rt.stop()   # Stop playback
             running = False
-            rt.bpm(defaultBPM) # Reset Orchestra tempo
+            bpm = defaultBPM
+            rt.bpm(bpm) # Reset Orchestra tempo
     
     else:
         print("MQTT error.")

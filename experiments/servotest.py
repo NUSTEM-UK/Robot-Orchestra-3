@@ -9,7 +9,7 @@ myservo = [Servo(27), Servo(22), Servo(5), Servo(6),
 
 for i in range(8):
     myservo[i].min()
-    sleep(0.1)
+    # sleep(0.1)
 
 sleep(1)
 
