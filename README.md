@@ -14,6 +14,10 @@ Other components (in earlier repositories, because they're maybe still relevant)
 
 The specific glockenspiel this release was developed to drive did not survive a hectic weekend of use at the Great Exhibition of the North Family Expo, summer 2018. It was retired / recycled subsequently. Hence, we currently have a controller with nothing to control. Sniff.
 
+## Issues
+
+At some point, the UNTZtrument controller script turned into a rubbish drummer. When first written, it was excellent at keeping (perceived) time; at present, it's not particularly great.
+
 ### General configuration
 
 Every Pi in the system will need:
