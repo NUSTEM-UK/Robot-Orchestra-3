@@ -27,6 +27,8 @@ At some point, the UNTZtrument controller script `orchestra-controller.py` turne
 
 ## Configuration & script purpose
 
+![System flow control diagram]("docs/Robot-Orchestra-3-command-diagram.png)
+
 Messaging between system components is entirely via MQTT. The system is loosely-coupled, and typically survives momentary disruption or restart of individual components. D1 mini boards can leave or join the network seamlessly. Every Pi involved in the system will need a python MQTT library:
 
     pip3 install paho-mqtt
@@ -96,4 +98,6 @@ D1 mini-based players will burst into life playing that beat pattern within a co
 
 ### Alternatives to the hardware controller
 
-In principle, the software/GUIZero-based controller may be swapped in from the previous codebase -- which should be 'Return of the Robot Orchestra.' The underlying MQTT messaging grammar didn't change. I'm pretty sure of that. Well, reasonably certain.
+In principle, the software/GUIZero-based controller may be swapped in from the previous codebase -- which should be 'Return of the Robot Orchestra.' The underlying MQTT messaging grammar didn't change. I'm pretty sure of that. Well, reasonably certain. The software interface likely doesn't handle the integration with the glockenspiel, but that should be relatively simple to cut and paste in.
+
+The previous incarnation (Return of the Robot Orchestra - 'ROR') was the origin of the `songsearcher.py` and RTTTL playback approach, however the front-end was a Twitter client. Requests received over Twitter were parsed, a reply was sent, and the glockenspiel played as commanded. Some references to the Twitter front-end remain in the codebase, and it could likely be reinstated relatively easily.

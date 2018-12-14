@@ -16,9 +16,16 @@ Dependencies (all `pip3 install`):
     pygame
     paho-mqtt
 
+(Pygame is used for audio generation, which aids in debugging when you
+haven't built the glockenspiel yet.)
+
 Other dependencies:
     curl -sS get.pimoroni.com/displayotron | bash
     
+(The deployed-and-now-broken glockenspiel had a Display-o-Tron HAT installed
+for a little extra bling. Calls to this library will need to be removed
+if the HAT isn't installed.)
+
 """
 
 import pygame

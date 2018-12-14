@@ -1,8 +1,18 @@
+"""Fuzzy matching to a library of songs in RTTTL format.
+
+Takes an input string and matches against song title in a dictionary of available songs. 
+Returns song title, RTTTL string, and match confidence metric. Fuzzy matching applied so
+a 'match' is guaranteed, however wayward the confidence.
+
+Dependencies:
+    pip3 install fuzzywuzzy
+    pip3 install python-Levenshtein
+
+(the latter doesn't seem to be strictly necessary, but removes an annoying warning at runtime.)
+"""
+
 from rttllist import *
 from bigrtttl import *
-# dependency pip3 install fuzzywuzzy
-# pip3 install python-Levenshtein - not dependent but removes an annoying warning
-# fuzzywuzzy does our matching
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
