@@ -12,7 +12,7 @@
 #include <Servo.h>
 
 const char* ssid = "nustem";
-const char* password = "nustem123";
+const char* password = "nustem123"; // Security!
 
 // Stick the IP address of the MQTT server in the line below.
 // Find it by entering `ifconfig` at a Terminal prompt, and looking for
