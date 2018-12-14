@@ -27,7 +27,7 @@ At some point, the UNTZtrument controller script `orchestra-controller.py` turne
 
 ## Configuration & script purpose
 
-![System flow control diagram]("docs/Robot-Orchestra-3-command-diagram.png)
+![System flow control diagram]("docs/Robot-Orchestra-3-command-diagram.png")
 
 Messaging between system components is entirely via MQTT. The system is loosely-coupled, and typically survives momentary disruption or restart of individual components. D1 mini boards can leave or join the network seamlessly. Every Pi involved in the system will need a python MQTT library:
 
