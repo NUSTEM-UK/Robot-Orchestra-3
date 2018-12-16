@@ -1,4 +1,12 @@
-"""Dictionary of robot IDs for inclusion in other modules."""
+"""Dictionary of robot IDs for inclusion in other modules.
+
+This system isn't heavily used at present. It remains for legacy reasons, and for
+possibly future expansion. It doesn't exactly get in the way.
+
+The dictionaries allow individual D1 minis to be addressed more conveniently than
+via their MAC addresses. The module identify as 'skutters' for even deeper legacy
+reasons -- have you guessed that we've been hacking on the same codebase for 
+several years now? """
 
 instruments = {"00": "skutter_18:FE:34:FD:91:AD",
                "01": "skutter_5C:CF:7F:01:5B:22",

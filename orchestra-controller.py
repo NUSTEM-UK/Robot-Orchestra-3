@@ -175,11 +175,16 @@ def on_message(client, userdata, msg):
 
 
     elif str(msg.topic) == "orchestra/status":
-        """Handle playback status updates.
+        """Handle playback status updates related to glockenspiel requests.
         
         Doing it all this way is a bit of a legacy of how I'd originally planned to 
         have a conducting instrument as a separate thing. In practice, we used servo #7 
-        on the glockenspiel as an expedient alternative.
+        on the glockenspiel as an expedient alternative - it plays a bar of lead-in, then
+        the orchestra and melody are cued. The lead-in helps differentiate 'normal'
+        orchestra playback, and glockenspiel-accompanyment playback.
+
+        This pathway is never triggered if the glockenspiel requests front-end is not
+        running.
         """
         if str(msg.payload) == "lead-in":
             print(">>> LEAD-IN!")
@@ -261,15 +266,10 @@ trellis.clear()
 trellis.writeDisplay()
 
 # Initialise the timer, which will trigger at a rate specified by the
-# bpm setting. Note that the timer is not running when instantiated/
+# bpm setting. Note that the timer is not running when instantiated.
 rt = RepeatedTimer(tempo, playBeat)
 
-
-
-# The main needs to handle button presses and MQTT update callbacks
-# ...which are blocking. And we have a global callback thread timer running.
-# Sheesh, flow control in this code is gnarly.
-
+# Set up MQTT connection and callback handling
 mqttc = mqtt.Client()
 mqtt_server = "10.0.1.3"
 mqttc.on_connect = on_connect
@@ -278,6 +278,11 @@ mqttc.connect(mqtt_server, 1883)
 
 mqttc.loop_start()
 
+# ...so we finally get to the main loop.
+
+# The main loop needs to handle button presses and MQTT update callbacks
+# ...which are blocking. And we have a global callback thread timer running.
+# Sheesh, flow control in this code is gnarly.
 try:
     while True:
         time.sleep(0.08) # TODO: Replace with MQTT check.
@@ -307,6 +312,9 @@ try:
                 running = False
             else:
                 # Start playback!
+                # This will also trigger playback on first launch, since startStopButton.is_pressed is false,
+                # so we fall through to this path. Which wasn't how I'd planned to do things, but achieves the
+                # outcome I'd intended. Schrödinger's bug?
                 print('>>> START', bpm)
                 rt.start()
                 running = True

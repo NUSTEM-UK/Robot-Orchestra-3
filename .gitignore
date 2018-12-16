@@ -102,3 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+Robot_Orchestra_Wemos/.DS_Store

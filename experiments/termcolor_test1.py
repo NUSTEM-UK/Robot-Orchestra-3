@@ -1,3 +1,7 @@
+"""Noodling with colour output in a terminal shell.
+
+Using the termcolor library (`pip3 install termcolor`)."""
+
 import sys
 from termcolor import colored, cprint # pip3 install termcolor
 
