@@ -32,7 +32,7 @@ def get_input():
     """Collect request string from shell."""
     cprint("Request a song name: ", "green")
     return input("--> ")
-    
+
 def respond(request, song, accuracy):
     """Respond to the input request."""
     print()
@@ -43,7 +43,7 @@ def respond(request, song, accuracy):
     respond_string2 = colored("I'm ", 'yellow')
     respond_string2 += colored(accuracy, 'green')
     respond_string2 += colored("% confident that matches: ", 'yellow')
-    respond_string2 += colored(song, 'green') 
+    respond_string2 += colored(song, 'green')
     cprint(respond_string2)
     print()
     sleep(0.5)
@@ -88,7 +88,7 @@ def countdown():
     cprint("...2", 'magenta')
     sleep(1)
     cprint("...1", 'green')
-    sleep(0.8)    
+    sleep(0.8)
 
 
 def next_request():
@@ -99,10 +99,10 @@ def next_request():
     print()
     cprint(">>> MATCHING...", 'red')
     guessed_song_title, match_accuracy, song_rtttl = searcher(request)
-    
+
     respond(request, guessed_song_title, match_accuracy)
     play_song(guessed_song_title, song_rtttl)
-    
+
 
 def on_connect(self, client, userdata, rc):
     """Connect to the MQTT broker and subscribe to relevant channels."""
@@ -122,7 +122,8 @@ def on_message(client, userdata, msg):
 
 if __name__ == "__main__":
     mqttc = mqtt.Client()
-    mqtt_server = "10.0.1.3"
+    # mqtt_server = "10.0.1.3"
+    mqtt_server = "127.0.0.1"
     mqttc.on_connect = on_connect
     mqttc.on_message = on_message
     mqttc.connect(mqtt_server, 1883)

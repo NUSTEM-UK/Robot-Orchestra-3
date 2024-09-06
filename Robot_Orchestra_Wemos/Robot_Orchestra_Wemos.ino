@@ -10,15 +10,17 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <Servo.h>
+// #include "network_functions.c"
 
-const char* ssid = "nustem";
+const char* ssid = "connect";
 const char* password = "nustem123"; // Security!
 
 // Stick the IP address of the MQTT server in the line below.
 // Find it by entering `ifconfig` at a Terminal prompt, and looking for
 // the wlan0 ipv4 address.
-const char* mqtt_server = "10.0.1.3";
+// const char* mqtt_server = "10.0.1.3";
 // const char* mqtt_server = "192.168.0.8";
+const char* mqtt_server = "192.168.8.181";
 
 String subString;
 char skutterNameArray[60];
@@ -77,7 +79,7 @@ void setup() {
     pinMode(D5, INPUT_PULLUP);
     pinMode(D6, INPUT_PULLUP);
     pinMode(D7, INPUT_PULLUP);
-    
+
     // default to the zeroth channel for playback
     myChannel = 0;
     myOldChannel = 0;
@@ -189,7 +191,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
             twitch(myservo, angleMiss);
             Serial.println(F("pish!"));
         }
-        
+
         delay(150); // Give the servo time to move
         // Return the servo to rest position
         twitch(myservo, angleRest);
@@ -244,3 +246,55 @@ void callback(char* topic, byte* payload, unsigned int length) {
 void twitch(Servo &theServo, int angle) {
     theServo.write(angle); // Move towards chosen angle
 }
+
+// Setup WiFi network, reporting local IP address to serial
+void setup_wifi() {
+  delay(10);
+  // We start by connecting to a WiFi network
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+
+}
+
+
+// Maintain MQTT broker connection, subscribe to topics on (re)connect
+void reconnect() {
+  // Loop until we're reconnected
+  digitalWrite(02, HIGH);
+  while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    digitalWrite(02, LOW);
+    if (client.connect(skutterNameArray)) {
+      Serial.println("connected");
+      client.publish("orchestra/announce", subsTargetArray);
+      client.subscribe(subsTargetArray);
+      client.subscribe("orchestra/twitch");
+      client.subscribe("orchestra/beats");
+      client.subscribe("orchestra/play");
+      // Subscribe to the global playback channel
+      client.subscribe("orchestra/playset");
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      digitalWrite(00, HIGH);
+      delay(5000);
+    }
+  }
+}
+
